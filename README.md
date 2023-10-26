@@ -4,8 +4,11 @@ In this project we are implementing a design into a web page from scratch using 
 
 ## Final Product
 ### Desktop
+![desktop_image](images/desktop.jpg)
 ### Tablet
+![tablet_image](images/tablet.jpg)
 ### Mobile
+![Mobile_image](images/mobile.jpg)
 
 ## Task
 0. Read and be familiar with Figma
@@ -55,3 +58,11 @@ In this project we are implementing a design into a web page from scratch using 
     A good landing page has always a contact form.
 
     You are free to add any animations and/or constraints on fields.
+5. Footer
+    Copy files from the previous task.
+
+    Last piece of the page… the Footer!
+
+    And you are done!
+
+    Good job!
