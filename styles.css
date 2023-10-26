@@ -43,6 +43,11 @@ button:active {
   --button_color: #FF6565;
   --paragraph_font_size: 16px;
   --hover_color: #FF6565;
+  --bar-width: 33px;
+  --bar-height: 4px;
+  --hamburger-gap: 6px;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  --x-width: calc(var(--hamburger-height) * 1.41421356237)
 }
 /* Adding background image to main body*/
 body {
@@ -53,7 +58,7 @@ body {
   background-position: top center;
 }
 /* Styling the header */
-.header {
+.header_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,6 +66,9 @@ body {
   margin: 0 auto;
   margin-top: 28px;
   margin-bottom: 296px;
+}
+.hamburger_menu {
+  display: none;
 }
 .headphones_logo {
   height: 32px;
@@ -314,6 +322,9 @@ body {
         margin-left: 66px;
         margin-right: 69px;
     }
+    .hamburger_menu {
+      display: none;
+    }
     .examples {
       max-width: 472px;
     }
@@ -328,52 +339,78 @@ body {
 /* Mobile */
 @media (max-width: 480px) {
     .header {
+      display: flex;
+      margin-left: 26px;
+      margin-right: 69px;
+    }
+
+    .header_container {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 160px;
+        margin-bottom: 80px;
       }
-    
-      .headphones_logo {
-        margin: 20px 0; /* Center the logo vertically and add space above it */
+
+      .hamburger_menu::before,
+      .hamburger_menu::after,
+      .hamburger_menu input {
+        content: "";
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--color_white);
+        border-radius: 99px;
+        transform-origin: left center;
+        transition: opacity 200ms ease-in-out, width  200ms ease-in-out, rotate 200ms ease-in-out, translate 200ms ease-in-out;
       }
-    
-      .nav_button {
-        display: none; /* Hide the navigation links by default */
-      }
-    
-      .nav_links {
-        display: block; /* Display the menu button */
-        font-size: 24px; /* Increase the font size for the menu button */
+
+      .hamburger_menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 153px;
+        gap: var(--hamburger-gap);
+        z-index: 3;
         cursor: pointer;
-        position: relative;
-        /* Position the button at the top left corner */
-        position: absolute;
-        top: 10px;
-        left: 10px;
       }
-    
-      .nav_links.active + .nav_button {
-        display: flex; /* Display the navigation links when the button is active */
-        flex-direction: column; /* Stack navigation links vertically */
+
+      .hamburger_menu input {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
       }
-    
-      .nav_links.active::before {
-        content: '\2630'; /* Add the hamburger menu icon (three horizontal lines) */
-        margin-right: 10px; /* Add space between the icon and the text */
+
+      .hamburger_menu:has(input:checked)::before {
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
       }
-    
-      /* Toggle the active class when the button is clicked */
-      .nav_links.active::before,
-      .nav_links.active + .nav_button {
-        display: none;
+
+      .hamburger_menu:has(input:checked)::after {
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / 2);
       }
-    
-      .nav_links.active {
-        display: block;
+
+      .hamburger_menu input:checked {
+        opacity: 0;
+        width: 0;
       }
-    
-      .nav_links.active::before {
-        content: '\2715'; /* Change the icon to a close (X) icon when active */
+
+      .headphones_logo {
+        margin: 20px 0;
+      }
+
+      .nav_links {
+        translate: -100%;
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        margin-bottom: 0px;
+      }
+
+      .hamburger_menu:has(input:checked) + .header_container .nav_links {
+        translate: 0;
       }
 
       .call_to_action p {
