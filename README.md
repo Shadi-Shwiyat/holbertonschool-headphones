@@ -4,11 +4,11 @@ In this project we are implementing a design into a web page from scratch using 
 
 ## Final Product
 ### Desktop
-![desktop_image](images/desktop.jpg)
+![desktop_image](images/desktop.png)
 ### Tablet
-![tablet_image](images/tablet.jpg)
+![tablet_image](images/tablet.png)
 ### Mobile
-![Mobile_image](images/mobile.jpg)
+![Mobile_image](images/mobile.png)
 
 ## Task
 0. Read and be familiar with Figma
