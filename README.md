@@ -2,6 +2,11 @@
 ## Implement a design from scratch
 In this project we are implementing a design into a web page from scratch using CSS and HTML5. This is an iteration on a previous project where we were tasked with implementing a web page but we were given the HTML skeleton and guidance on the CSS. This time we are only given a figma file that will be the end result of our web page, and we are building everything on our own. We are also tasked with making the page compatible with mobile devices.
 
+## Final Product
+### Desktop
+### Tablet
+### Mobile
+
 ## Task
 0. Read and be familiar with Figma
     Create an account in Figma and open this project and “Duplicate to your Drafts” to have access to all design details.
@@ -30,3 +35,11 @@ In this project we are implementing a design into a web page from scratch using 
     Now, your turn!
 
     For this first task: create the header/hero piece
+2. "What we do..." section
+    Copy files from the previous task.
+
+    For this second task: create the “What we do…” section
+
+    In this section, you will need custom font icons. Here the archive of it: holberton_school-icon.zip Inside you will find demo page of how to use it.
+
+    Important: try to build as generic as you can… you will probably need some components in next section.
