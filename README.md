@@ -17,4 +17,16 @@ In this project we are implementing a design into a web page from scratch using 
     - links hover/active: #FF6565
     - button hover/active: opacity: 0.9
     - max width of the content: 1000px centered in the page
-1. 
+1. Header
+    Building a web page the right way, is not easy - expect if you put in place strong foundations:
+    - reset CSS styling
+    - use variables
+    - simple/“as generic as you can” CSS selectors
+    - avoid using super specific CSS selectors as much as possible
+    - simple HTML structure - div containers are your friend!
+
+    Last advice: Personally, I always start to build a web page from outside to inside and from top to bottom. But you can try to other way - it’s fine - but you should structure the way that you will implement a component and not get lost with HTML tags.
+
+    Now, your turn!
+
+    For this first task: create the header/hero piece

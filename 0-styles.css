@@ -1,0 +1,183 @@
+/* Fonts used throughout css styling */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('fonts/SourceSansPro-Regular.otf') format('opentype');
+}
+h1 {
+    color: var(--color_white);
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+}
+h4 {
+    color: var(--color_white);
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+}
+p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Source Sans Pro';
+    line-height: 26px;
+}
+button {
+    flex-shrink: 0;
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    color: var(--color_white);
+    background: var(--button_color);
+    border-radius: 22px;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.50);
+}
+button:hover,
+button:active {
+    opacity: 0.9;
+}
+:root {
+    --color_white: #fff;
+    --alternate_color: #071629;
+    --button_color: #FF6565;
+    --paragraph_font_size: 16px;
+    --hover_color: #FF6565;
+}
+/* Adding background image to main body*/
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-image: url(images/headphones_hero_1.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+/* Styling the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 28px;
+    margin-bottom: 296px;
+}
+.headphones_logo {
+    height: 32px;
+    width: 161px;
+    align-items: center;
+}
+.nav_links {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 271.806px;
+    height: 30px;
+}
+.nav_button {
+    color: var(--color_white);
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+}
+.nav_button:hover,
+.nav_button:active {
+    color: var(--hover_color);
+}
+/* Styling the main body */
+.call_to_action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 637px;
+    margin: 0 auto;
+}
+.call_to_action h1 {
+    margin-bottom: 0;
+}
+.call_to_action h4 {
+    margin-top: 3px;
+    margin-bottom: 0;
+}
+.call_to_action_button {
+    align-items: center;
+    width: 162px;
+    height: 44px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+.call_to_action p {
+    color: var(--color_white);
+    margin-top: 63px;
+}
+
+/* Media Queries for Mobile rules */
+@media (max-width: 768px) {
+    .header {
+        margin-left: 66px;
+        margin-right: 69px;
+    }
+}
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 160px;
+      }
+    
+      .headphones_logo {
+        margin: 20px 0; /* Center the logo vertically and add space above it */
+      }
+    
+      .nav_button {
+        display: none; /* Hide the navigation links by default */
+      }
+    
+      .nav_links {
+        display: block; /* Display the menu button */
+        font-size: 24px; /* Increase the font size for the menu button */
+        cursor: pointer;
+        position: relative;
+        /* Position the button at the top left corner */
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+    
+      .nav_links.active + .nav_button {
+        display: flex; /* Display the navigation links when the button is active */
+        flex-direction: column; /* Stack navigation links vertically */
+      }
+    
+      .nav_links.active::before {
+        content: '\2630'; /* Add the hamburger menu icon (three horizontal lines) */
+        margin-right: 10px; /* Add space between the icon and the text */
+      }
+    
+      /* Toggle the active class when the button is clicked */
+      .nav_links.active::before,
+      .nav_links.active + .nav_button {
+        display: none;
+      }
+    
+      .nav_links.active {
+        display: block;
+      }
+    
+      .nav_links.active::before {
+        content: '\2715'; /* Change the icon to a close (X) icon when active */
+      }
+
+      .call_to_action p {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .call_to_action h1 {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+}
