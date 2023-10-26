@@ -43,3 +43,15 @@ In this project we are implementing a design into a web page from scratch using 
     In this section, you will need custom font icons. Here the archive of it: holberton_school-icon.zip Inside you will find demo page of how to use it.
 
     Important: try to build as generic as you can… you will probably need some components in next section.
+3. "Our results" section
+    Copy files from the previous task.
+
+    For this third task: create the “Our results” section
+
+    Now you can reuse components form the previous task!
+4. Contact us
+    Copy files from the previous task.
+
+    A good landing page has always a contact form.
+
+    You are free to add any animations and/or constraints on fields.
