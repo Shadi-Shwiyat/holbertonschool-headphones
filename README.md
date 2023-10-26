@@ -1,4 +1,5 @@
 # Holbertonschool-headphones
+[Click here to see a live demo of the website created in this repo!](https://shadi-shwiyat.github.io/holbertonschool-headphones/)
 ## Implement a design from scratch
 In this project we are implementing a design into a web page from scratch using CSS and HTML5. This is an iteration on a previous project where we were tasked with implementing a web page but we were given the HTML skeleton and guidance on the CSS. This time we are only given a figma file that will be the end result of our web page, and we are building everything on our own. We are also tasked with making the page compatible with mobile devices.
 
